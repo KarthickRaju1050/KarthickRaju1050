@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from '../../pages/Homepage/homepagefirs.module.scss'
+import styles from '../../pages/Homepage/homepagefirs.module.scss';
 
 const MenuItem =({title,imageUrl,size})=>{
    

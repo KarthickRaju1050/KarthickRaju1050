@@ -1,5 +1,5 @@
 import * as React from 'React'
-import styles from '../../../pages/Homepage/homepagefirs.module.scss'
+import styles  from '../../../pages/Homepage/homepagefirs.module.scss'
 import { ICrownClothingProps } from '../../../webparts/crownClothing/components/ICrownClothingProps'
 import MenuItem from '../menu-item.component';
 
@@ -8,6 +8,7 @@ sections:any[]
 }
 
 class DirectoryMenu extends React.Component<ICrownClothingProps,ICrownClothingState>{
+  state: { sections: ({ title: string; imageUrl: string; id: number; linkUrl: string; size?: undefined; } | { title: string; imageUrl: string; size: string; id: number; linkUrl: string; })[]; };
     constructor(props){
         super(props)
         this.state = {
@@ -49,7 +50,7 @@ class DirectoryMenu extends React.Component<ICrownClothingProps,ICrownClothingSt
         }
        render(): React.ReactNode {
            return(
-            <div className='directory-menu'>
+            <div className={styles.directorymenu}>
 {this.state.sections.map(({title,imageUrl,size})=>{
     return(
 <MenuItem  title={title} imageUrl={imageUrl} size={size}/>
